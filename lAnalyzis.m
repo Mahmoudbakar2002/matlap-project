@@ -8,7 +8,6 @@ function res= lAnalyzis(f,a,b,exact)
   i=0;
 
    for i = 1:10
-      %# do something
     trap(i)=Trapezodial(f,a,b,n(i));
     simp(i)=Simp(f,a,b,n(i));
     mid(i)=Mid(f,a,b,n(i));
@@ -20,6 +19,7 @@ function res= lAnalyzis(f,a,b,exact)
 
   res=trap;
   plot(n,trap,n,simp,n,mid);
+  %error
 
 end
 

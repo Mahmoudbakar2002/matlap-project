@@ -1,6 +1,7 @@
 function res= project()
-  display("-------Trapzodial---- :\n");
 
+  %take function name to use
+  % then use it
   fxTxt =   input("enter f(x) :\n" , "s");
 
   function fxret= fxn(x)
@@ -10,8 +11,10 @@ function res= project()
 
     a =input("enter a :\n" );
     b =input("enter b :\n" );
-    exact=input("enter exact:\n");
-   % n =input("enter n :\n" );
+
+
+    %if function used id iAnalyzis take this input
+      exact=input("enter exact:\n");
 
     res= lAnalyzis(@fxn,a,b,exact)%Trapezodial(@fxn,a,b,n);
 
