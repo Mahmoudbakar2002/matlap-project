@@ -1,11 +1,12 @@
-function res= lAnalyzis(f,a,b,exact)
+function res= lAnalyzis(f,a,b,zz)
+  exact=input("enter exact:\n");
 
-  n=[10:10:100];
+  n=[10:10:zz];
 
-  trap=[1:1:10];
-  sim=[1:1:10];
-  mid=[1:1:10];
-  exacta=[1:1:10];
+  trap=[1:1:zz/10];
+  sim=[1:1:zz/10];
+  mid=[1:1:zz/10];
+  exacta=[1:1:zz/10];
 
   for i = 1:10
      trap(i)=Trap(f,a,b,n(i));
@@ -13,14 +14,11 @@ function res= lAnalyzis(f,a,b,exact)
      mid(i)=Mid(f,a,b,n(i));
      exacta(i)=exact
   endfor
-    display(trap);
-    display(sim);
-    display(mid);
 
   plot(n,trap,n,sim,n,mid,n,exacta);
   legend('Trapezoidal','Simpson','midpoint','exact');
-  res=exact;
 
+  res=exact;
 end
 
 

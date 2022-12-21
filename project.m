@@ -1,22 +1,21 @@
 function res= project()
+  opin = input("enter used wanted method (Trap,Simp,Mid,lAnalyzis) :\n","s");
 
-  %take function name to use
-  % then use it
-  fxTxt =   input("enter f(x) :\n" , "s");
+  if strcmp (opin ,"Trap")!=1 & strcmp (opin ,"Simp") != 1 & strcmp (opin ,"Mid")!=1 & strcmp (opin ,"lAnalyzis")!=1
+      disp('\n Enter valid  method pls one of the brackets ones!!!')
+  endif
 
+
+  fxTxt = input("enter f(x) :\n" , "s");
   function fxret= fxn(x)
      fxret=eval(fxTxt);
-   endfunction
+  endfunction
 
+  a =input("enter a :\n" );
+  b =input("enter b :\n" );
 
-    a =input("enter a :\n" );
-    b =input("enter b :\n" );
-
-
-    %if function used id iAnalyzis take this input
-      exact=input("enter exact:\n");
-
-    res= lAnalyzis(@fxn,a,b,exact)%Trapezodial(@fxn,a,b,n);
+  n =input("enter number of iterations :\n" );
+  res= feval(opin,@fxn,a,b,n);
 
  end
 
