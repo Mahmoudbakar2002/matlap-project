@@ -5,21 +5,21 @@ function res= lAnalyzis(f,a,b,exact)
   trap=[1:1:10];
   sim=[1:1:10];
   mid=[1:1:10];
-  i=0;
+  exacta=[1:1:10];
 
-   for i = 1:10
-    trap(i)=Trapezodial(f,a,b,n(i));
-    simp(i)=Simp(f,a,b,n(i));
-    mid(i)=Mid(f,a,b,n(i));
+  for i = 1:10
+     trap(i)=Trap(f,a,b,n(i));
+     sim(i)=Simp(f,a,b,n(i));
+     mid(i)=Mid(f,a,b,n(i));
+     exacta(i)=exact
   endfor
-
-      display(trap);
-    display(simp);
+    display(trap);
+    display(sim);
     display(mid);
 
-  res=trap;
-  plot(n,trap,n,simp,n,mid);
-  %error
+  plot(n,trap,n,sim,n,mid,n,exacta);
+  legend('Trapezoidal','Simpson','midpoint','exact');
+  res=exact;
 
 end
 
