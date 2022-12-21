@@ -12,7 +12,7 @@ function res= lAnalyzis(f,a,b,zz)
      trap(i)=Trap(f,a,b,n(i));
      sim(i)=Simp(f,a,b,n(i));
      mid(i)=Mid(f,a,b,n(i));
-     exacta(i)=exact
+     exacta(i)=exact;
   endfor
 
   plot(n,trap,n,sim,n,mid,n,exacta);
