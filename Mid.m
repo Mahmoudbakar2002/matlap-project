@@ -1,4 +1,4 @@
-function retval = midpoint(f, a, b, n)
+function retval = Mid(f, a, b, n)
     h = (b-a)/n;
     retval = 0;
     for i = 0:(n-1)

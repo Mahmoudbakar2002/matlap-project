@@ -1,8 +1,9 @@
 function res= project()
   opin = input("enter used wanted method (Trap,Simp,Mid,lAnalyzis) :\n","s");
 
-  if strcmp (opin ,"Trap")!=1 & strcmp (opin ,"Simp") != 1 & strcmp (opin ,"Mid")!=1 & strcmp (opin ,"lAnalyzis")!=1
-      disp('\n Enter valid  method pls one of the brackets ones!!!')
+  if strcmp (opin ,"Trap")!=1 && strcmp (opin ,"Simp") != 1 && strcmp (opin ,"Mid")!=1 && strcmp (opin ,"lAnalyzis")!=1
+      disp('\n Enter valid  method pls one of the brackets ones!!!');
+      opin = input("enter used wanted method (Trap,Simp,Mid,lAnalyzis) :\n","s");
   endif
 
 
